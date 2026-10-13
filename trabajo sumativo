@@ -1,0 +1,60 @@
+<!DOCTYPE HTML>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <title> formulario prueba sumativa </title>
+
+    <style>
+        body {
+            font-family: arial, sans-serif;        
+            margin: 10px;
+        }  
+        input, button{
+            margin: 10px;
+            font-size: 20px;
+        }
+        #resultado{
+            font-size: 20px;
+            margin-top: 10px;
+        }
+      
+      
+    </style>
+</head>
+
+<body>
+    <h2> formulario, PRUEBA SUMATIVA</h2>
+<label for="NombreUsuario">nombre de usuario</label>
+<input type="text" id="NombreUsuario" name="NombreUsuario">
+<br><br>
+<label for="Direccion">dirección</label>
+<input type="mail" id="Direccion" name="Direccion">
+<br><br>
+<label for="Apellido">apellido</label>
+<input type="text" id="Apellido" name="Apellido">
+<br><br>
+<label for="Telefono">telefono</label>
+<input type="tel" id="Telefono" name="Telefono">
+<br><br>
+<label for="Asignatura">asignatura</label>
+<input type="text" id="Asignatura" name="Asignatura">
+<br><br>
+<button onclick="enviarFormulario()">Enviar</button>
+</body>
+
+
+<div id="resultado">guala el resultado</div>
+<script>
+
+    function enviarFormulario() {
+
+    let nombreUsuario = document.getElementById("NombreUsuario");
+    let dirección = document.getElementById("Direccion");
+    let apellido = document.getElementById("Apellido");
+    let telefono = document.getElementById("Telefono");
+    let asignatura = document.getElementById("Asignatura");
+    
+    document.getElementById("resultado").textContent = "lo capturado es: " + nombreUsuario.value + " " + dirección.value + " " + apellido.value + " " + telefono.value + " " + asignatura.value;
+
+   } 
+</script>
